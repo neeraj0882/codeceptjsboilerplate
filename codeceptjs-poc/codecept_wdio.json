@@ -1,0 +1,42 @@
+{
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "output": "./output",
+  "helpers": {
+    "Mochawesome": {
+      "uniqueScreenshotNames": "true"
+    },
+    "WebDriverIO": {
+      "url": "http://localhost",
+      "browser": "chrome",
+      "windowSize": "maximize",
+      "uniqueScreenshotNames": "true"
+      }
+    },
+  "include": {
+    "I": "./steps_file.js",
+    "registerPage": "./pages/register.js"
+  },
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "output"
+    }
+  },
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {
+    "features": "./features/*.feature",
+    "steps": [
+      "./step_definitions/steps.js"
+    ]
+  },
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "name": "CodeceptJS"
+}

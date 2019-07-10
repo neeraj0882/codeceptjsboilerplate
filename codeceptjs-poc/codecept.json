@@ -1,0 +1,33 @@
+{
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "output": "./output",
+  "helpers": {
+    "Protractor": {
+      "url": "http://localhost",
+      "driver": "hosted",
+      "browser": "chrome",
+      "angular": false,
+      "windowSize": "maximize"
+    }
+},
+  "include": {
+    "I": "./steps_file.js",
+    "registerPage": "./pages/register.js"
+  },
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "output",
+      "reportName": "TestReport"
+    }
+  },
+  "bootstrap": false,
+  "hooks": [],
+  "gherkin": {
+    "features": "./features/*.feature",
+    "steps": [
+      "./step_definitions/steps.js"
+    ]
+  },
+  "name": "codeceptjs-poc"
+}
